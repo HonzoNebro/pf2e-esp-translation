@@ -64,7 +64,7 @@ function AACreateItemNameProxy(item, realName) {
 
 function patchSpellRange() {
     libWrapper?.register(
-        "pf2e-es",
+        "pf2e-es-honzo",
         "CONFIG.PF2E.Item.documentClasses.spell.prototype.isMelee",
         function (wrapped) {
             return game.pf2e.system.sluggify(this.system.range.value) === "toque" || wrapped();
@@ -73,7 +73,7 @@ function patchSpellRange() {
     );
 
     libWrapper?.register(
-        "pf2e-es",
+        "pf2e-es-honzo",
         "CONFIG.PF2E.Item.documentClasses.spell.prototype.isRanged",
         function (wrapped) {
             const res = wrapped();
@@ -88,7 +88,7 @@ function patchSpellRange() {
 
 Hooks.once("babele.init", () => {
     if (game.babele) {
-        game.settings.register("pf2e-es", "dual-language-names", {
+        game.settings.register("pf2e-es-honzo", "dual-language-names", {
             name: "Nombres en español e ingles",
             hint: "No solo muestra los nombres en español sino tambien en ingles.",
             scope: "world",
@@ -101,12 +101,12 @@ Hooks.once("babele.init", () => {
         });
 
         game.babele.register({
-            module: "pf2e-es",
+            module: "pf2e-es-honzo",
             lang: "es",
             dir: "translation/es/compendium",
         });
         game.babele.register({
-            module: "pf2e-es",
+            module: "pf2e-es-honzo",
             lang: "es",
             dir: "translation/es/modules/compendium",
         });

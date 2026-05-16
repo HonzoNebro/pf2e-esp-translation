@@ -1,7 +1,7 @@
 {
-  "name": "pf2e-esp",
+  "name": "pf2e-es-honzo",
   "version": "1.0.0",
-  "description": "<div align=\"center\">\r <h3 align=\"center\">PF2E-es translation</h3>",
+  "description": "Traduccion independiente al español de PF2E para Foundry VTT 14.",
   "main": "main.js",
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/HonzoNebro/pf2e-esp-translation.git"
   },
-  "author": "",
+  "author": "HonzoNebro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HonzoNebro/pf2e-esp-translation/issues"

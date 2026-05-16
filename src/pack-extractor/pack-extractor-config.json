@@ -5,7 +5,7 @@
         "zipURL": "https://github.com/foundryvtt/pf2e/releases/download/pf2e-8.1.2/json-assets.zip",
         "packs": {
             "actor": "./translation/en/actors",
-            "crowdin": "./translation/en/compendium"
+            "compendium": "./translation/en/compendium"
         }
     },
     "moduleLocalizations": {
@@ -150,7 +150,7 @@
                 "spells"
             ],
             "mapping": "item",
-            "savePath": "crowdin"
+            "savePath": "compendium"
         },
         "BasicActorPacks": {
             "packNames": [
@@ -195,7 +195,7 @@
                 "wardens-of-wildwood-bestiary"
             ],
             "mapping": "actor",
-            "savePath": "crowdin",
+            "savePath": "compendium",
             "limitedPacks": {
                 "blood-lords-bestiary": [
                     "Arboreal Snag",
@@ -346,7 +346,7 @@
                 "journals"
             ],
             "mapping": "journal",
-            "savePath": "crowdin"
+            "savePath": "compendium"
         },
         "OtherActors": {
             "packNames": [
@@ -365,7 +365,7 @@
                 "rollable-tables"
             ],
             "mapping": "rollableTable",
-            "savePath": "crowdin"
+            "savePath": "compendium"
         }
     },
     "itemDatabase": {

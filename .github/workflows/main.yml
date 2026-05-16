@@ -6,7 +6,7 @@ on:
     branches:
       - main
 env:
-  ZIP_FILENAME: "pf2e-es"
+  ZIP_FILENAME: "pf2e-es-honzo"
   PACKAGE_CONTENT: "module.json src/babele-register.js src/translator/ translation/ styles/"
 
 jobs:

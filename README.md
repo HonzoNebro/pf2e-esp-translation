@@ -1,29 +1,33 @@
 <div align="center">
-<h3 align="center">PF2E-es translation</h3>
+<h3 align="center">PF2E-es Honzo</h3>
 
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
-## Colaboraciones
+## Proyecto
 
-Para poder lograr que el flujo automatico funcione, los comits y las pr deberian seguir la se usa [Convencional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-para las traducciones esta [El proyecto Pathfinder 2E Español en Crowdin](https://crowdin.com/project/pathfinder-2e-espanol)
+Traduccion independiente al español del sistema Pathfinder Segunda Edicion para Foundry VTT 14.
 
-## About The Project
+Este repositorio se mantiene como paquete separado. El identificador del modulo es `pf2e-es-honzo`, por lo que puede instalarse y publicarse sin ocupar el identificador de otro modulo.
 
-Traduccion no oficial al español del sistema de Pathfinder Segunda edicion para Foundy VTT.
+## Compatibilidad
 
-Se ha usado https://github.com/thedaviddelta/lingva-translate para poder hacer la traduccion base del sistema y se continuo con correcciones del mismo
+- Foundry VTT: 14.360 o superior dentro de la generacion 14.
+- Pathfinder 2E System: 8.1.2 dentro de la generacion 8.
+- Requiere Babele y libWrapper.
 
-Y estamos mejorando y apliando la traducciones en [El proyecto Pathfinder 2E Español en Crowdin](https://crowdin.com/project/pathfinder-2e-espanol)
+## Desarrollo
 
-Para estar en contacto tenemos nuestro [Discord!](https://discord.gg/KdFugdsctp)
+Los commits deberian seguir [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
-## Estructura del proyecto
+Para regenerar las fuentes inglesas desde la version configurada de PF2e:
 
-Pendiente...
+```bash
+npm install
+npm run pack-extractor
+```
 
 ## Nota
 
-Queremos hacer mencion y agradecimiento al [Proyecto de traduccion al Aleman](https://github.com/Foundry-VTT-PF2-German/lang-de-pf2e) ya que nos hemos basado en su repositorio para poder generar los json de traduccion .
+Este proyecto conserva historial y codigo derivados del trabajo comunitario previo, pero sus manifiestos, releases y automatizaciones apuntan a este repositorio independiente.

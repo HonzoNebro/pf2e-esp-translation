@@ -5,7 +5,7 @@ Hooks.once("init", () => {
     game.langEsPf2e = Translator.get();
 
     // Register token setting
-    game.settings.register("pf2e-es", "token", {
+    game.settings.register("pf2e-es-honzo", "token", {
         name: "Retrato de ficha",
         hint: "Al importar un PNJ traducido de un compendio, ¿debe utilizarse la imagen del retrato como ficha en lugar de la imagen de ficha normal?",
         scope: "world",
@@ -28,10 +28,10 @@ class Translator {
     async initialize() {
         // Read config file
         const config = await Promise.all([
-            fetch("modules/pf2e-es/src/translator/translator-config.json")
+            fetch("modules/pf2e-es-honzo/src/translator/translator-config.json")
                 .then((r) => r.json())
                 .catch((_e) => {
-                    console.error("pf2e-es: Couldn't find translator config file.");
+                    console.error("pf2e-es-honzo: Couldn't find translator config file.");
                 }),
         ]);
 
@@ -50,7 +50,7 @@ class Translator {
             ]);
             this.dictionary = dict[0];
         } else {
-            console.error("pf2e-es: Dictionary not available");
+            console.error("pf2e-es-honzo: Dictionary not available");
         }
 
         // Create list of icons
@@ -73,7 +73,7 @@ class Translator {
     // Register a madia path for a compendium containing portrait and token images
     addMediaPath(compendium, path) {
         ["portraits", "tokens"].forEach(async (imageType) => {
-            const imagePath = game.settings.get("pf2e-es", "token")
+            const imagePath = game.settings.get("pf2e-es-honzo", "token")
                 ? path.concat(`/portraits/`)
                 : path.concat(`/${imageType}/`);
             const images = {};
@@ -181,7 +181,7 @@ class Translator {
                 dir: compendiumDirectory,
             });
         } else {
-            console.error("pf2e-es: Required module Babele not active");
+            console.error("pf2e-es-honzo: Required module Babele not active");
         }
 
         // Register imageDirectory if provided
@@ -268,7 +268,7 @@ class Translator {
     translateDualLanguage(data, translation) {
         if (!translation || data === translation) {
             return data;
-        } else if (game.settings.get("pf2e-es", "dual-language-names")) {
+        } else if (game.settings.get("pf2e-es-honzo", "dual-language-names")) {
             return this.normalizeName(translation) + "/" + data;
         } else {
             return this.normalizeName(translation);
